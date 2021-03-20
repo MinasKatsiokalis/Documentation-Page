@@ -56,8 +56,6 @@ body{
     background-size: 200% 100%;
     background-position: right bottom;
     transition: all .3s ease-out;
-
-    
 }
 
 #navbar ul li:hover{
@@ -87,6 +85,11 @@ body{
     z-index: 0;
 }
 
+#main-doc img{
+    width: 100%;
+    max-width: 450px;
+}
+
 #main-doc section{
     background-color: rgb(0, 1, 24);
 }
@@ -111,10 +114,12 @@ body{
 
 #main-doc pre{
     background-color: black;
+    overflow-x: auto;
     border-left: rgb(136, 0, 0) solid 5px;
 }
 
 .code-line{
+    overflow-x: auto;
     padding: 1rem;
     line-height: 2;
     background-color: black;
@@ -131,31 +136,13 @@ footer{
     color: rgba(0, 255, 221);
 }
 
-@media only screen and (max-width: 815px) {
-/* For mobile phones: */
-    #navbar {
-        position: absolute;
-        top: 0;
-        padding: 0;
-        margin: 0;
-        width: 100%;
-        max-height: 345px;
-        border: none;
-        border-bottom: 2px solid;
-    }
-
-    #main-doc {
-        position: relative;
-        margin-left: 0px;
-        margin-top: 345px;
-    }
-}
+/*top page button*/
 
 #top-btn {
-    display: none; 
+    display: none;
     position: fixed; 
-    bottom: 20px; 
-    right: 30px; 
+    bottom: 3%; 
+    right: 2%; 
     z-index: 99; 
     border: none; 
     outline: none; 
@@ -182,3 +169,30 @@ footer{
     50%  {transform: translateY(5%);}
     100% {transform: translateY(-5%);}
 }
+
+/*responsiveness*/
+
+@media only screen and (max-width: 815px) {
+    /* For mobile phones: */
+        #navbar {
+            position: absolute;
+            top: 0;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            max-height: 345px;
+            border: none;
+            border-bottom: 2px solid;
+        }
+    
+        #main-doc {
+            position: relative;
+            margin-left: 0px;
+            margin-top: 345px;
+        }
+
+        #top-btn {
+            font-size: 14px;
+        }
+    }
+    
